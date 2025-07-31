@@ -9,6 +9,11 @@ This document logs all meaningful code changes, grouped by semantic version and 
 
 
 
+## [v0.1.1] 2025-07-31
+### Fixed
+- Corrected custom user model save method so superuser creation persists.
+
+
 ## 🧭 Build RoadMap
 
 This section maps the full project journey — all core components we plan to build or refine, written as sequential goals.
