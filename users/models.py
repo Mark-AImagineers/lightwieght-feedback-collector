@@ -9,7 +9,7 @@ class UserManager(BaseUserManager):
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
-        user.save(using=self.db)
+        user.save(using=self._db)
         return user
     
     def create_superuser(self, email, password=None, **extra_fields):
@@ -49,8 +49,8 @@ class EmailUser(AbstractBaseUser, PermissionsMixin):
     def save(self, *args, **kwargs):
         if self.subscription_expires and timezone.now() > self.subscription_expires:
             self.subscription_level = SUBSCRIPTION_FREE
-            self.subscription_expire = None
-            super().save(*args, **kwargs)
+            self.subscription_expires = None
+        super().save(*args, **kwargs)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
