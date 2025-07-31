@@ -22,3 +22,14 @@ def get_version_data(BASE_DIR, variable):
     if variable not in data:
         raise KeyError(f"{variable} not found in version.json")
     return data[variable]
+
+def get_faq_data(BASE_DIR):
+    """
+    Load and return FAQ entries from static/assets/json/faq.json
+    """
+    path = os.path.join(BASE_DIR, 'static', 'assets', 'json', 'faq.json')
+    try:
+        with open(path, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception:
+        return []

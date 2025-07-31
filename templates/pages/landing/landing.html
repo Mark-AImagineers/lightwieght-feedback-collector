@@ -1,0 +1,118 @@
+{% extends 'base-public.html' %}
+{% block title %}Collect Feedback Instantly{% endblock %}
+
+{% block content %}
+<!-- Hero -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Collect Customer Feedback in Seconds</h1>
+    <p class="lead mb-4">
+      No apps. No hassle. Just scan a QR code and let your customers tell you what they really think.
+    </p>
+    <a href=# class="btn btn-primary btn-lg me-2">Get Started Free</a>
+    <a href=# class="btn btn-outline-secondary btn-lg">Login</a>
+  </div>
+</section>
+
+<!-- How it works -->
+ <section id="how-it-works" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">How It Works</h2>
+    <div class="row">
+      <div class="col-md-4 text-center mb-4">
+        <div class="mb-3">
+          <i data-feather="codesandbox" class="text-black mb-3" width="48" height="48"></i>
+        </div>
+        <h5>Generate Your QR</h5>
+        <p class="text-primary" >Create a unique QR code for each branch in seconds.</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <div class="mb-3">
+          <i data-feather="smartphone" class="text-black mb-3" width="48" height="48"></i>
+        </div>
+        <h5>Customers Scan & Respond</h5>
+        <p class="text-primary">No apps or logins—customers just scan and answer a quick survey.</p>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <div class="mb-3">
+          <i data-feather="bar-chart-2" class="text-black mb-3" width="48" height="48"></i>
+        </div>
+        <h5>View Insights</h5>
+        <p class="text-primary">See real-time feedback summaries and export data as CSV.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+ <section id="features" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Features</h2>
+    <div class="row g-4">
+      <div class="col-md-3 text-center">
+        <i data-feather="smartphone" class="text-primary mb-3" width="36" height="36"></i>
+        <h5>No Login Needed</h5>
+        <p>Customers give feedback instantly via QR code—no accounts required.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <i data-feather="layers" class="text-primary mb-3" width="36" height="36"></i>
+        <h5>Multiple Branches</h5>
+        <p>Manage unlimited locations, each with its own QR and reports.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <i data-feather="download" class="text-primary mb-3" width="36" height="36"></i>
+        <h5>CSV Export</h5>
+        <p>Download all responses in CSV for deeper analysis or integration.</p>
+      </div>
+      <div class="col-md-3 text-center">
+        <i data-feather="bar-chart-2" class="text-primary mb-3" width="36" height="36"></i>
+        <h5>Basic Analytics</h5>
+        <p>View satisfaction averages and response counts right in your dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+ <section id="faq" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+        {% for item in faq_list %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+            <button class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse{{ forloop.counter }}"
+                    aria-expanded="false"
+                    aria-controls="collapse{{ forloop.counter }}">
+                <span>{{ item.question }}</span>
+                <i data-feather="chevron-down" class="text-primary"></i>
+            </button>
+            </h2>
+            <div id="collapse{{ forloop.counter }}"
+                class="accordion-collapse collapse"
+                aria-labelledby="heading{{ forloop.counter }}"
+                data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+                {{ item.answer }}
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="py-5 bg-primary text-white">
+  <div class="container text-center">
+    <h2 class="mb-3">Ready to start collecting feedback?</h2>
+    <p class="lead mb-4">Hassle Free Feedback Collection. Register now.</p>
+    <a href=# class="btn btn-light btn-lg">Get Started Free</a>
+  </div>
+</section>
+
+
+{% endblock %}

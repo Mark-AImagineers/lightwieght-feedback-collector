@@ -1,0 +1,18 @@
+[
+  {
+    "question": "Do customers need an account?",
+    "answer": "No—feedback is anonymous and requires only a QR scan."
+  },
+  {
+    "question": "How many branches can I add?",
+    "answer": "1 branch on free tier, paid plans coming soon."
+  },
+  {
+    "question": "Can I export the data?",
+    "answer": "Yes—CSV export is available per branch or site-wide."
+  },
+  {
+    "question": "Is there a free tier?",
+    "answer": "Yes—1 branch and 20 responses/month free; paid plans coming soon."
+  }
+]
