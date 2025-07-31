@@ -53,7 +53,7 @@ class EmailUser(AbstractBaseUser, PermissionsMixin):
             super().save(*args, **kwargs)
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['first_name', 'last_name']
 
     objects = UserManager()
 

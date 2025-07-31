@@ -7,10 +7,13 @@
       <div class="col-12 p-0">    
         <div class="login-card login-dark">
           <div>
-            <div><a class="logo" href="/index">
-              <img class="img-fluid for-light m-auto" src="{% static 'assets/images/logo/logo.png' %}" alt="looginpage">
-              <img class="img-fluid for-dark m-auto" src="{% static 'assets/images/logo/logo_dark.png' %}" alt="looginpage"></a></div>
-            <div class="login-main"> 
+            <div class="text-center mb-4">
+              <a href="/">
+                <img src="{% static 'assets/images/logo/logo_full_black.png' %}" alt="App Logo"
+                    style="height: 160px;" class="d-block mx-auto">
+              </a>
+            </div>
+            <div class="login-main">
               <form class="theme-form" method="post" novalidate>
                 {% csrf_token %}
                 {{ form.non_field_errors }}
