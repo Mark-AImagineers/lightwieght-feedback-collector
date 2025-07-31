@@ -1,0 +1,438 @@
+- var landing_sticky        = true;
+- var wow                   = true;
+- var animate               = true;
+- var tooltip               = true;
+- var jarallax_libs         = true;
+- var landing_icon          = true;
+- var slick                 = true;
+- var landing_slider        = true;
+- var landing_font          = true;
+doctype html
+html(lang='en')
+  include ../../components/landing-header
+  body.landing-page
+    include ../../components/taptop
+    // page-wrapper Start
+    div.landing-page
+      // header start
+      .landing-home
+        .container-fluid
+          .sticky-header
+            header.main-landing-header
+              .container-fluid.fluid-space
+                .row
+                  .col-12
+                    nav#navbar-example2.navbar.navbar-light.p-0
+                        a.navbar-brand(href="javascript:void(0)") 
+                          img.img-fluid.logo-size(src="../assets/images/logo/logo_dark.png" alt="logo")
+                        ul.landing-menu.nav.nav-pills
+                          li.nav-item.menu-back
+                            | back
+                            i.fa.fa-angle-right
+                          li.nav-item
+                            a.nav-link(href='#home') Home
+                          li.nav-item
+                            a.nav-link(href='#layout') Layouts
+                          li.nav-item
+                            a.nav-link(href='#applications') Applications
+                          li.nav-item
+                            a.nav-link(href='#features') Feature
+                          li.nav-item
+                            a.nav-link(href='https://docs.pixelstrap.net/admin/yuri/document/' target="_blank") Documentation
+                          li.nav-item
+                            a.nav-link(href='https://docs.google.com/forms/d/e/1FAIpQLSe6hKUXw_By-pg7yabL0FxoTM02ZPTxoXy8PE3yboRuUCuyeA/viewform' target="_blank") Hire us
+                        .buy-block
+                          a.btn.btn-landing.btn-primary(href="https://themeforest.net/user/pixelstrap/portfolio" target="_blank") Buy Now
+                          .toggle-menu
+                            i.fa.fa-bars   
+            // header end   
+          .row 
+            .col-12
+              .main-content
+                .content-title
+                  h1 The greatest 
+                    span.animation-line Customer
+                    |  dashboard 
+                  p The amazing and user-friendly HTML was made using adaptable, modern, and strong unique elements.
+                  .main-buttons
+                    a.btn.btn-primary(href="https://admin.pixelstrap.net/yuri/template/index.html" target="_blank") View Demo
+                    a.btn.btn-warning(href="https://docs.pixelstrap.net/admin/yuri/document/" target="_blank") Documentation
+            .col-md-7.col-sm-8.col-10.m-auto
+              .screen-1
+                img.img-fluid(src="../assets/images/landing/screen1.png", alt="screen1")
+                img.img-fluid.mobile-layout(src="../assets/images/landing/mobile-layout.png", alt="mobile-layout")
+                div
+                  svg
+                    use(href='../assets/svg/icon-sprite.svg#decor-arrow') 
+                  h4.txt-warning Trendy Design
+          img.img-fluid.home-card-1(src="../assets/images/landing/card-1.png", alt="card-1")
+          img.img-fluid.home-card-2(src="../assets/images/landing/card-2.jpg", alt="card-2")
+          img.img-fluid.home-card-3(src="../assets/images/landing/card-3.png", alt="card-3")
+
+      // Page Body Start      
+      section#layout.section-space.yuri-demo-section.layout
+        .container
+          .row
+            .col-sm-12
+              .landing-title 
+                h2 
+                  span.gradient-7 Creative & unique
+                  |  Admin layouts
+                  .line-1.bg-secondary
+        .container-fluid.fluid-space
+          .row.demo-imgs.gx-md-4.gy-md-3.g-3.justify-content-center
+            .col-lg-4.col-sm-6
+              .demo-content
+                .yuri-demo-img
+                  .layout-wrapper
+                    ul.dot-group 
+                      li.bg-primary
+                      li.bg-secondary
+                      li.bg-warning
+                    h2.txt-primary Default Dashboard
+                  .overflow-hidden
+                    .demo-color
+                      a(href="index.html" target="_blank") 
+                        img.img-fluid(src="../assets/images/landing/layout-images/dubai.jpg" alt="default")
+            .col-lg-4.col-sm-6
+              .demo-content
+                .yuri-demo-img
+                  .layout-wrapper
+                    ul.dot-group 
+                      li.bg-primary
+                      li.bg-secondary
+                      li.bg-warning
+                    h2.txt-primary E-commerce Dashboard
+                  .overflow-hidden
+                    .demo-color
+                      a(href="dashboard-02.html" target="_blank") 
+                        img.img-fluid(src="../assets/images/landing/layout-images/paris.jpg" alt="classicSidebar")
+                
+            .col-lg-4.col-sm-6
+              .demo-content
+                .yuri-demo-img
+                  .layout-wrapper
+                    ul.dot-group 
+                      li.bg-primary
+                      li.bg-secondary
+                      li.bg-warning
+                    h2.txt-primary Project Dashboard
+                  .overflow-hidden
+                    .demo-color
+                      a(href="dashboard-03.html" target="_blank") 
+                        img.img-fluid(src="../assets/images/landing/layout-images/los-angle.png" alt="material")
+      section#frameworks.section-space.framework-section
+        .container
+          .row
+            .col-sm-12.wow.pulse
+              .landing-title
+                h5.sub-title.txt-warning Frameworks available
+                h2 Top 
+                  span.gradient-4 Frameworks
+                  .line-1.bg-success
+          .row.g-md-5.g-sm-4.g-3.demo-img1
+            .col-12.framework-section
+              #pills-tabContent.tab-content
+                #pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab')
+                  ul.frameworks-list
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/1.png' alt='')
+                      h5.mb-0.f-w-600 Bootstrap 5
+                    li.box 
+                      div
+                        img(src='../assets/images/landing/framework/2.png' alt='')
+                      h5.mb-0.f-w-600 CSS
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/3.png' alt='')
+                      h5.mb-0.f-w-600 Sass
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/4.png' alt='')
+                      h5.mb-0.f-w-600 Pug
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/5.png' alt='')
+                      h5.mb-0.f-w-600 NPM
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/6.png' alt='')
+                      h5.mb-0.f-w-600 Charts
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/7.png' alt='')
+                      h5.mb-0.f-w-600 Gulp
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/8.png' alt='')
+                      h5.mb-0.f-w-600 Starter Kit
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/9.png' alt='')
+                      h5.mb-0.f-w-600 40+ UI Kits
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/10.png' alt='')
+                      h5.mb-0.f-w-600 8+ Layout
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/11.png' alt='')
+                      h5.mb-0.f-w-600 Tables
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/12.png' alt='')
+                      h5.mb-0.f-w-600 11 Icon Sets
+                    li.box 
+                      div
+                        img(src='../assets/images/landing/framework/13.png' alt='')
+                      h5.mb-0.f-w-600 Builders
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/14.png' alt='')
+                      h5.mb-0.f-w-600 Forms
+                    li.box
+                      div
+                        img(src='../assets/images/landing/framework/15.png' alt='')
+                      h5.mb-0.f-w-600 17+ Apps
+      section#applications.section-space.app-section
+        .container-fluid.fluid-space
+          .row
+            .col-sm-12.wow.pulse
+              .landing-title
+                h5.sub-title Usefull Application
+                h2 
+                  | Fast & powerful 
+                  span.gradient-4 Applications
+                  .line-1.bg-success
+          .row.g-md-5.g-sm-4.g-3.demo-imgs
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='social-app.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="social-app.html" target="_blank") Social App 
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='add-products.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="add-products.html" target="_blank") E-commerce
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='private-chat.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="private-chat.html" target="_blank") Chats 
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='letter-box.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="letter-box.html" target="_blank") Letter Box
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='bookmark.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="bookmark.html" target="_blank") Bookmark
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='to-do.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="to-do.html" target="_blank") To-Do 
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='kanban.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="kanban.html" target="_blank") Kanban Board 
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='task.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="task.html" target="_blank") Tasks
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='contacts.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="contacts.html" target="_blank") Contacts
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='user-profile.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="user-profile.html" target="_blank") Users
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='file-manager.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="file-manager.html" target="_blank") File Manager
+            .col-xl-4.col-sm-6 
+              .app-outer-box
+                .app-box.app-bg-1
+                  .app-image
+                    .img-effect
+                      a(href='projects.html' target='_blank')
+                        img.img-fluid.yuri-img(src='../assets/images/landing/social-app.jpg' alt='')
+                .app-button
+                  a.btn(href="projects.html" target="_blank") Project               
+      section#features.section-space.feature-section
+        .container
+          .row 
+            .col-sm-12.wow.pulse
+              .landing-title
+                h5.sub-title Why you choose Yuri
+                h2.gradient-11 Unique Features
+                  .line-1.bg-danger
+          .row.g-md-5.g-sm-4.g-3.demo-imgs
+            .col-xl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card
+                .feature-icon 
+                  div.bg-feature-1
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#quality-code')
+                h4 Quality & Clean Code
+                p.mb-0.f-light All you need to know of using clean code as a manager to make your team and your software awesome. 
+            .col-xl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card
+                .feature-icon 
+                  div.bg-feature-2
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#bootstrap-icon')
+                h4 Bootstrap v5.0
+                p.mb-0.f-light Bootstrap is a complete CSS framework.Bootstrap is built on responsive 12-column grids, layouts, and components
+            .col-xl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card
+                .feature-icon
+                  div.bg-feature-3
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#hande-made')
+                h4 Handmade Icons
+                p.mb-0.f-light Let's learn how to use our own SVG icons in yuri admin template.Icon System with SVG Sprites
+            .col-xl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card
+                .feature-icon
+                  div.bg-feature-4
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#components-1')
+                h4 Limitless Components
+                p.mb-0.f-light The limitless layout collection and UI kit library is the biggest collection of layouts for web design
+            .col-xl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card
+                .feature-icon
+                  div.bg-feature-5
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#customize-1')
+                h4 Easy Customizable
+                p.mb-0.f-light For novices, this is a simple step-by-step approach. alter the layout, settings, and content
+            .col-xl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card
+                .feature-icon
+                  div.bg-feature-6
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#user-friendly')
+                h4 Responsive & User-Friendly
+                p.mb-0.f-light Use responsive design to connect with all device users start designing your website for mobile devices. 
+            .col-xl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card
+                .feature-icon
+                  div.bg-feature-7
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#premium')
+                h4 Premium Support
+                p.mb-0.f-light We are always be their for your support and you are facing some issues you can create ticket.
+            .col-xl-3.col-lg-4.col-sm-6 
+              .feature-box.common-card
+                .feature-icon
+                  div.bg-feature-8
+                    svg
+                      use(href='../assets/svg/icon-sprite.svg#color-option')
+                h4 Colors Options
+                p.mb-0.f-light yuri provide unlimited main color option.other colors you can change easily using scss variables
+      section.section-space.premium-section
+        .container
+          .row.g-md-4.g-3
+              .col-md-6
+                .premium-img
+                  img.img-fluid(src="../assets/images/landing/premium.png", alt="premium")
+              .col-md-6
+                .premium-wrapper
+                  h3.sub-title Our License
+                  h2 we give it as we think that excellent support is needed
+                  span Check our reviews for fast and accurate support to ensure support. we offer premium assistance around-the-clock for any bugs you encounter. and we’ll do best to help you out with any future updates for free.
+                  a.btn.link-text.btn-colors(href="https://support.pixelstrap.com/" target="_blank") Support
+
+      footer.footer-bg
+        .container-fluid.fluid-space
+          .landing-center
+            .feature-content
+              div
+                h2 The Yuri Bootstrap Admin Theme Trusted By Many Developers World Wide.
+                .footer-rating
+                  svg.fill-warning
+                    use(href='../assets/svg/icon-sprite.svg#fill-star')
+                  svg.fill-warning
+                    use(href='../assets/svg/icon-sprite.svg#fill-star')
+                  svg.fill-warning
+                    use(href='../assets/svg/icon-sprite.svg#fill-star')
+                  svg.fill-warning
+                    use(href='../assets/svg/icon-sprite.svg#fill-star')
+                  svg.stroke-warning
+                    use(href='../assets/svg/icon-sprite.svg#fill-star')
+              a.btn.bg-primary.btn-hover-effect(href="https://themeforest.net/user/pixelstrap/portfolio" target="_blank") Buy Now
+            
+          .sub-footer.row.g-md-2.g-3
+            .col-md-6 
+              .left-subfooter
+                img.img-fluid(src="../assets/images/logo/logo_dark.png", alt="logo")
+                p.mb-0 Copyright 2023 © Yuri theme by pixelstrap
+            .col-md-6 
+              .right-subfooter
+                h3 If You Like Our Theme So Please Rate Us
+                ul  
+                  li
+                    a(href="https://support.pixelstrap.com/" target="_blank") Get Support
+                  li
+                    a(href="https://docs.pixelstrap.net/admin/yuri/document/" target="_blank") Documentation
+                  li
+                    a(href="https://docs.google.com/forms/d/e/1FAIpQLSe6hKUXw_By-pg7yabL0FxoTM02ZPTxoXy8PE3yboRuUCuyeA/viewform" target="_blank") Hire Us
+
+    include ../../components/landing-footer-files

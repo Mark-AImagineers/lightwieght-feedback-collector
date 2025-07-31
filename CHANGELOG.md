@@ -32,5 +32,6 @@ This section maps the full project journey — all core components we plan to bu
 - Add a read-only `/version/` endpoint (planned)
 - Add JWT token handling (Hybrid, keep it stateful)
 - Add Password Reset
+- Switch to GUNICORN / UVICORN
 
 This list will expand or shift as the project evolves.
