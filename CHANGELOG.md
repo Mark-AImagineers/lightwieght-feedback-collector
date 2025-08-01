@@ -4,15 +4,38 @@ Offline Feedback Collector
 This document logs all meaningful code changes, grouped by semantic version and date.
 
 ---
+## [v0.1.0] 2025-08-1
+
+
+---
 
 ## [v0.1.0] 2025-07-31
+- Scaffolded Basic Django + Boostrap (Yuri) + Postgres + Docker Files
+- Added Readme, CHANGELOG, LICENSE
 
 
+## [v0.2.1] 2025-07-31
+### Added
+- Added static file support /static and custom template directory /templates
+- Created a custom user model `EmailUser` inheriting from `AbstractBaseUser`
+- Registered `EmailUser` in `AUTH_USER_MODEL`
+- Added semantic string representation admin `EmailUser`
+- Created `RegistrationForm` extending `UserCreationForm`
+- Built `RegisterView` and `UserLoginView`~using class-based views
+- Wired up /register, /login, /dashboard with clean Bootstrap form layout (no templates yet)
 
-## [v0.1.1] 2025-07-31
+### Changed
+- Replaced unused ```{% sass_src %}``` with proper compiled `style.css` link
+
 ### Fixed
 - Corrected custom user model save method so superuser creation persists.
+- Fixed a `save()` bug (create user not saving)
+- Fixed `createsuperuser` not prompting for first and last name
 
+### Notes
+- Verified project runs correctly via ```docker compose up```
+- Connected index.html and confirmed static assets loading
+- Verified `is_superuser` and `is_staff` flags set correctly
 
 ## 🧭 Build RoadMap
 
