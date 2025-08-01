@@ -16,7 +16,7 @@
             <div class="status bg-success"> </div>
           </div>
           <div> 
-            <h4>Wade Warren</h4><span>UI Designer</span>
+            <h4>{{ request.user.first_name }} {{ request.user.last_name }}</h4><span>{{ request.user.email }}</span>
           </div>
         </div>
         <div>
@@ -45,15 +45,18 @@
                 <h6>Pinned</h6>
               </div>
             </li>
-            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" target="_blank" href="https://yuridjango.pixelstrap.net/">
+            <!-- Dashboard -->
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="{% url 'dashboard' %}">
                 <svg class="stroke-icon">
                   <use href="{% static 'assets/svg/icon-sprite.svg'%}#stroke-home"></use>
                 </svg><span>Dashboard</span></a></li>
+
+            <!-- Businesses -->
             <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
                 <svg class="stroke-icon">
                   <use href="{% static 'assets/svg/icon-sprite.svg'%}#stroke-starter-kit"></use>
-                </svg><span>Starter kit</span></a>
-              <ul class="sidebar-submenu">
+                </svg><span>My Businesses</span></a>
+              <!-- <ul class="sidebar-submenu">
                 <li><a class="submenu-title" href="#">color version<span class="sub-arrow"><i class="fa fa-chevron-right"></i></span></a>
                   <ul class="nav-sub-childmenu submenu-content">
                     <li><a href="/indexPage">Layout Light</a></li>
@@ -74,16 +77,20 @@
                     <li><a href="/indexPage">Footer Fixed</a></li>
                   </ul>
                 </li>
-              </ul>
+              </ul> -->
             </li>
+
+            <!-- Events -->
             <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="https://support.pixelstrap.com/" target="_blank">
                 <svg class="stroke-icon">
                   <use href="{% static 'assets/svg/icon-sprite.svg'%}#stroke-social"></use>
-                </svg><span>Raise Support</span></a></li>
+                </svg><span>My Events</span></a></li>
+
+            <!-- QR Codes -->
             <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.net/admin/yuri/document/" target="_blank">
                 <svg class="stroke-icon">
                   <use href="{% static 'assets/svg/icon-sprite.svg'%}#stroke-form"></use>
-                </svg><span>Documentation                                    </span></a></li>
+                </svg><span>QR Codes</span></a></li>
           </ul>
         </div>
         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

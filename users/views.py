@@ -6,6 +6,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.views.generic import TemplateView
+from django.shortcuts import redirect
 
 class RegisterView(CreateView):
     model = EmailUser
@@ -16,6 +17,11 @@ class RegisterView(CreateView):
 
 class UserLoginView(LoginView):
     template_name = "pages/auth/login.html"
+
+    def dispatch(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect("dashboard")
+        return super().dispatch(request, *args, **kwargs)
 
 @method_decorator(login_required, name='dispatch')
 class DashboardView(TemplateView):

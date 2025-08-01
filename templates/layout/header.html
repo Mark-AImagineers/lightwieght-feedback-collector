@@ -21,6 +21,7 @@
               <svg>
                 <use href="{% static 'assets/svg/icon-sprite.svg'%}#search"></use>
               </svg></span></li>
+              
           <li class="onhover-dropdown">
             <div class="notification-box onhover-click">
               <svg>
@@ -58,7 +59,9 @@
               </ul>
             </div>
           </li>
-          <li class="cart-nav onhover-dropdown">
+
+          <!-- Messages -->
+          <!-- <li class="cart-nav onhover-dropdown">
             <div class="cart-box onhover-click">
               <svg>
                 <use href="{% static 'assets/svg/icon-sprite.svg'%}#email"></use>
@@ -112,7 +115,9 @@
                 </div>
               </div>
             </div>
-          </li>
+          </li> -->
+
+          <!-- dark/light mode toggle -->
           <li>
             <div class="mode">
               <svg class="moon-icon">
@@ -123,7 +128,9 @@
               </svg>
             </div>
           </li>
-          <li class="cart-nav onhover-dropdown">
+
+          <!-- Cart -->
+          <!-- <li class="cart-nav onhover-dropdown">
             <div class="cart-box onhover-click">
               <svg>
                 <use href="{% static 'assets/svg/icon-sprite.svg'%}#stroke-ecommerce"></use>
@@ -172,12 +179,14 @@
                 <h5>Oops! Your cart empty!!!</h5>
               </div>
             </div>
-          </li>
+          </li> -->
+
+          <!-- User Profile -->
           <li class="profile-nav onhover-dropdown">
             <div class="onhover-click">
               <div class="sidebar-image"> <img src="{% static 'assets/images/user.png' %}" alt="profile"><span class="status status-success"></span></div>
               <div class="sidebar-content"> 
-                <h4>Wade Warren</h4><span class="f-12 f-w-600 f-light">UI Designer</span>
+                <h4>{{ request.user.first_name }} {{ request.user.last_name }}</h4><span class="f-12 f-w-600 f-light">{{ request.user.email }}</span>
               </div>
             </div>
             <ul class="profile-dropdown onhover-show-div">
