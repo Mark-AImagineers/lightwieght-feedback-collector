@@ -4,15 +4,18 @@ Offline Feedback Collector
 This document logs all meaningful code changes, grouped by semantic version and date.
 
 ---
-## [v0.1.0] 2025-08-1
+## [v0.2.2] 2025-08-1
+### Added
+- Added login template
 
+
+### Changed
+- linked `/register` and `/login` to all auth pages
+
+### Fixed
+- cleaned sidebar, footer and header pages 
 
 ---
-
-## [v0.1.0] 2025-07-31
-- Scaffolded Basic Django + Boostrap (Yuri) + Postgres + Docker Files
-- Added Readme, CHANGELOG, LICENSE
-
 
 ## [v0.2.1] 2025-07-31
 ### Added
@@ -36,6 +39,14 @@ This document logs all meaningful code changes, grouped by semantic version and 
 - Verified project runs correctly via ```docker compose up```
 - Connected index.html and confirmed static assets loading
 - Verified `is_superuser` and `is_staff` flags set correctly
+
+---
+
+## [v0.1.0] 2025-07-31
+- Scaffolded Basic Django + Boostrap (Yuri) + Postgres + Docker Files
+- Added Readme, CHANGELOG, LICENSE
+
+---
 
 ## 🧭 Build RoadMap
 

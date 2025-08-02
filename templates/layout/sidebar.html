@@ -52,7 +52,7 @@
                 </svg><span>Dashboard</span></a></li>
 
             <!-- Businesses -->
-            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="#">
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="{% url 'businesses' %}">
                 <svg class="stroke-icon">
                   <use href="{% static 'assets/svg/icon-sprite.svg'%}#stroke-starter-kit"></use>
                 </svg><span>My Businesses</span></a>
@@ -81,13 +81,13 @@
             </li>
 
             <!-- Events -->
-            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="https://support.pixelstrap.com/" target="_blank">
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="{% url 'events' %}" target="_blank">
                 <svg class="stroke-icon">
                   <use href="{% static 'assets/svg/icon-sprite.svg'%}#stroke-social"></use>
                 </svg><span>My Events</span></a></li>
 
             <!-- QR Codes -->
-            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="https://docs.pixelstrap.net/admin/yuri/document/" target="_blank">
+            <li class="sidebar-list"><i class="fa fa-thumb-tack"></i><a class="sidebar-link sidebar-title" href="{% url 'qrcodes' %}" target="_blank">
                 <svg class="stroke-icon">
                   <use href="{% static 'assets/svg/icon-sprite.svg'%}#stroke-form"></use>
                 </svg><span>QR Codes</span></a></li>

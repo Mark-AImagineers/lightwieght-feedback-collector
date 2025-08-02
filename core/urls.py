@@ -7,4 +7,5 @@ urlpatterns = [
     path('test/', test_page, name='test'),
     path('', landing_view, name='landing'),
     path("", include("users.urls")),
+    path("", include("feedback.urls"),)
 ]
