@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'widget_tweaks',
+    'feedback',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,4 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.EmailUser'
 LOGIN_REDIRECT_URL = '/dashboard/'
+LOGIN_URL = "/login/"

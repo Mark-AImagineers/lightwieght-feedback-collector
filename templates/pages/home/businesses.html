@@ -1,13 +1,51 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
-{% comment %} {% load sass_tags %} {% endcomment %}
-
+{% load widget_tweaks %}
 
 {% block content %}
+<div class="container mt-4">
+  <h2>Add a New Business</h2>
 
-<!-- Container-fluid starts-->
-<h1>My Businesses</h1>
-<!-- Container-fluid Ends-->
-        
-    
-{% endblock %}    
+  <form method="POST" enctype="multipart/form-data" class="mb-5">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="row">
+      {% for field in form %}
+        <div class="col-md-6 mb-3">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {% render_field field class="form-control" %}
+          {% if field.errors %}
+            <div class="text-danger">{{ field.errors|striptags }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Business</button>
+  </form>
+
+  <hr>
+
+  <h3>Your Businesses</h3>
+  <div class="row">
+    {% for business in businesses %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          {% if business.logo %}
+            <img src="{{ business.logo.url }}" class="card-img-top" alt="{{ business.business_name }}">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{ business.business_name }}</h5>
+            <p class="card-text">{{ business.description }}</p>
+            <p class="card-text"><small>Email: {{ business.contact_email }}</small></p>
+            <p class="card-text"><small>Phone: {{ business.contact_number }}</small></p>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p>You haven’t added any businesses yet.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

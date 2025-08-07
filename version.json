@@ -1,7 +1,7 @@
 {
   "name": "Lightweight Feedback Collector",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "environment": "local",
-  "release_date": "2025-07-31",
-  "release_notes": "Fix user model save preventing superuser creation"
+  "release_date": "2025-08-07",
+  "release_notes": "updated /businesses logic and views"
 }

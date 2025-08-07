@@ -4,6 +4,18 @@ Offline Feedback Collector
 This document logs all meaningful code changes, grouped by semantic version and date.
 
 ---
+## [v0.2.3] 2025-08-7
+### Added
+- Added forms for business registration
+- set default login_url for @login_required decorator
+
+### Changed
+-Updated business_view to handle post form submissions and assign request.user as owner
+-Show a list of current user's business
+-Use @login_required decorator on business view
+
+---
+
 ## [v0.2.2] 2025-08-1
 ### Added
 - Added login template
@@ -74,5 +86,7 @@ This section maps the full project journey — all core components we plan to bu
 - Switch to GUNICORN / UVICORN
 - admin panel to monitor registered users and payment
 - social media signin/signup
+- image database setup
+- image for buisness and profile pages
 
 This list will expand or shift as the project evolves.
