@@ -1,5 +1,5 @@
 from django import forms
-from .models import Business
+from .models import Business, Event
 
 class BusinessForm(forms.ModelForm):
     class Meta:
@@ -10,4 +10,14 @@ class BusinessForm(forms.ModelForm):
             "logo",
             "contact_email",
             "contact_number",
+        ]
+
+class EventForm(forms.ModelForm):
+    class Meta:
+        model = Event
+        fields = [
+            "title",
+            "description",
+            "date",
+            "location",
         ]

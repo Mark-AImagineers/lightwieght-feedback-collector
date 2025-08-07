@@ -1,13 +1,47 @@
-{% extends 'base.html' %}
-{% load static %}
-{% comment %} {% load sass_tags %} {% endcomment %}
-
+{% extends "base.html" %}
+{% load widget_tweaks %}
 
 {% block content %}
+<div class="container mt-4">
+  <h2>Add New Event</h2>
 
-<!-- Container-fluid starts-->
-<h1>My Events</h1>
-<!-- Container-fluid Ends-->
-        
-    
-{% endblock %}    
+  <form method="POST" class="mb-5">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+
+    <div class="row">
+      {% for field in form %}
+        <div class="col-md-6 mb-3">
+          <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+          {% render_field field class="form-control" %}
+          {% if field.errors %}
+            <div class="text-danger">{{ field.errors|striptags }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Event</button>
+  </form>
+
+  <hr>
+
+  <h3>Your Events</h3>
+  <div class="row">
+    {% for event in events %}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ event.title }}</h5>
+            <p class="card-text">{{ event.description }}</p>
+            <p class="card-text"><small>Date: {{ event.date }}</small></p>
+            <p class="card-text"><small>Location: {{ event.location }}</small></p>
+          </div>
+        </div>
+      </div>
+    {% empty %}
+      <p>You haven't added any events yet.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -8,11 +8,15 @@ This document logs all meaningful code changes, grouped by semantic version and 
 ### Added
 - Added forms for business registration
 - set default login_url for @login_required decorator
+- Created Event model in models.py
+- Added EventForm in forms.py for user friendly event creation
+- Added a list of events owned by the logged-in user
 
 ### Changed
--Updated business_view to handle post form submissions and assign request.user as owner
--Show a list of current user's business
--Use @login_required decorator on business view
+- Updated business_view to handle post form submissions and assign request.user as owner
+- Show a list of current user's business
+- Use @login_required decorator on business view
+- Updated events_view in views.py to handle POST submissions, assign request.user as event owner
 
 ---
 

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Business
-from .forms import BusinessForm
+from .models import Business, Event
+from .forms import BusinessForm, EventForm
 from django.contrib.auth.decorators import login_required
 
 @login_required
@@ -24,9 +24,26 @@ def businesses_view(request):
 
     return render(request, template, context)
 
+@login_required
 def events_view(request):
+    if request.method == "POST":
+        form = EventForm(request.POST)
+        if form.is_valid():
+            event = form.save(commit=False)
+            event.owner = request.user
+            event.save()
+            return redirect("events")
+        
+    else:
+        form = EventForm()
+
+    user_events = Event.objects.filter(owner=request.user)
+
     template = "pages/home/events.html"
-    context = {}
+    context = {
+        "form": form,
+        "events": user_events,
+    }
     return render(request, template, context)
 
 def qrcodes_view(request):
